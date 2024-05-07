@@ -67,11 +67,15 @@ const store = createStore({
   },
 })
 
-store.$bind({
-  setData: (data) => {
-    console.log('setData done', data)
+store.$bind(
+  {
+    data: {},
+    setData: (data) => {
+      console.log('setData done', data)
+    },
   },
-})
+  'appStore',
+)
 
 // for (let i = 0; i < 6; i++) {
 //   store.arr[0][0][0].push(i.toString())

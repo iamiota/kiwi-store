@@ -1,4 +1,6 @@
-import Store, { createStore } from './store'
+import Store from './store'
+
+import { createStore } from './createStore'
 
 import type { StoreKey, StoreState, StoreAction, StoreOption, TStore, Page, Queue } from './types'
 
