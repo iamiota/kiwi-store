@@ -1,7 +1,7 @@
 {
   "name": "kiwi-store",
   "version": "0.0.1",
-  "description": "A typescript store management for mini program",
+  "description": "A TypeScript store management for mini program",
   "source": "src/index.ts",
   "main": "./dist/index.js",
   "module": "./dist/index.module.js",
@@ -18,7 +18,11 @@
     "type": "git",
     "url": "git+https://github.com/iamiota/kiwi-store.git"
   },
-  "keywords": ["events", "event bus", "typescript"],
+  "keywords": [
+    "store management",
+    "mini program",
+    "typescript"
+  ],
   "author": "Chris Yi",
   "license": "MIT",
   "bugs": {
@@ -26,6 +30,7 @@
   },
   "homepage": "https://github.com/iamiota/kiwi-store#readme",
   "devDependencies": {
-    "microbundle": "^0.15.1"
+    "microbundle": "^0.15.1",
+    "typescript": "^5.4.5"
   }
 }

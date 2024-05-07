@@ -1,21 +1,25 @@
 import Store from './store'
 
 export type StoreKey = string | number
-export type StoreStateOption = Record<StoreKey, any>
-export type StoreActionOption = Record<StoreKey, Function>
+export type StoreState = Record<StoreKey, any>
+export type StoreAction = Record<StoreKey, Function>
 
-export interface StoreOption<S extends StoreStateOption, A extends StoreActionOption> {
+export interface StoreOption<S extends StoreState, A extends StoreAction> {
   state: () => S
-  actions: A
+  actions: A & ThisType<S & A>
 }
 
-export type TStore<S extends StoreStateOption, A extends StoreActionOption> = S & A & Store<S, A>
+export type TStore<S extends StoreState, A extends StoreAction> = S & A & Store<S, A>
 
-export interface IView {
-  setData: (data: object) => void
+export interface Page {
+  key: string
+  view: {
+    setData: (data: Partial<Store>) => void
+    data: object
+  }
 }
 
 export interface Queue {
-  store: TStore<{}, {}>
+  store: Store
   paths: Array<StoreKey>
 }
