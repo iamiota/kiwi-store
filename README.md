@@ -99,8 +99,6 @@ Page({
 
 ---
 
-```typescript
-
 ## Contribution
 
 Your contributions and suggestions are heartily welcome.
@@ -108,4 +106,3 @@ Your contributions and suggestions are heartily welcome.
 ## License
 
 MIT
-```

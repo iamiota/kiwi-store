@@ -1,12 +1,13 @@
 {
   "name": "kiwi-store",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A TypeScript store management for mini program",
   "source": "src/index.ts",
   "main": "./dist/index.js",
   "module": "./dist/index.module.js",
   "unpkg": "./dist/index.umd.js",
   "exports": {
+    "types": "./dist/store.d.ts",
     "require": "./dist/index.cjs",
     "default": "./dist/index.js"
   },
@@ -18,11 +19,7 @@
     "type": "git",
     "url": "git+https://github.com/iamiota/kiwi-store.git"
   },
-  "keywords": [
-    "store management",
-    "mini program",
-    "typescript"
-  ],
+  "keywords": ["store management", "mini program", "typescript"],
   "author": "Chris Yi",
   "license": "MIT",
   "bugs": {

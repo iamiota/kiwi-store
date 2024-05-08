@@ -1,5 +1,10 @@
 import { createStore } from './index'
 
+interface User {
+  name: string
+  age: number
+}
+
 interface State {
   count: number
   user: {
@@ -18,7 +23,7 @@ interface State {
   arr: [[[[string]]]]
   e: {
     f: {
-      g?: Array<number>
+      g?: Array<User>
     }
   }
 }
@@ -40,7 +45,20 @@ const initialState: State = {
   },
   e: {
     f: {
-      g: [1, 2, 3],
+      g: [
+        {
+          name: 'tom',
+          age: 14,
+        },
+        {
+          name: 'jerry',
+          age: 15,
+        },
+        {
+          name: 'bob',
+          age: 16,
+        },
+      ],
     },
   },
   arr: [[[['a']]]],
@@ -59,7 +77,10 @@ const store = createStore({
       new Promise((resolve) => {
         setTimeout(() => {
           this.count++
-          store.e.f.g!.push(4)
+          store.e.f.g!.push({
+            name: 'tom',
+            age: 14,
+          })
           resolve(true)
         }, 1000)
       })
@@ -77,9 +98,11 @@ store.$bind(
   'appStore',
 )
 
-// for (let i = 0; i < 6; i++) {
-//   store.arr[0][0][0].push(i.toString())
-// }
+const arr = store.e.f.g!.map((item) => item)
+for (let i = 0; i < arr.length; i++) {
+  arr[i].age = i
+}
+// store.e.f.g = []
 // store.e.f.g!.push(4)
 // store.e.f.g!.pop()
 // delete store.e.f.g
