@@ -1,28 +1,16 @@
 {
-  "include": ["src/**/*.ts"],
+  "include": ["src/*.ts", "src/**/*.ts"],
   "compilerOptions": {
-    "baseUrl": ".",
-    "rootDir": ".",
-    "outDir": "dist",
-    "sourceMap": false,
-    "noEmit": true,
-    "target": "esnext",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "allowJs": false,
-    "skipLibCheck": true,
-    "noUnusedLocals": true,
-    "strictNullChecks": true,
+    "strict": true,
+    "declaration": true,
+    "declarationMap": true,
+    "module": "ESNext",
+    "target": "ESNext",
     "noImplicitAny": true,
     "noImplicitThis": true,
-    "noImplicitReturns": false,
-    "strict": true,
-    "isolatedModules": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "removeComments": false,
-    "jsx": "preserve",
-    "lib": ["esnext", "dom"]
+    "emitDecoratorMetadata": true
   }
 }

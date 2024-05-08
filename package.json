@@ -1,14 +1,16 @@
 {
   "name": "kiwi-store",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "description": "A TypeScript store management for mini program",
   "source": "src/index.ts",
   "main": "./dist/index.js",
-  "module": "./dist/index.module.js",
+  "module": "./dist/index.module.mjs",
   "unpkg": "./dist/index.umd.js",
+  "types": "./dist/index.d.ts",
   "exports": {
-    "types": "./dist/store.d.ts",
+    "types": "./dist/index.d.ts",
     "require": "./dist/index.cjs",
+    "import": "./dist/index.modern.mjs",
     "default": "./dist/index.js"
   },
   "scripts": {
